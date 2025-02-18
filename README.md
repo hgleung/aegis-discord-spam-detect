@@ -28,7 +28,7 @@ Sequential(
     Dense(16, activation='relu'),
     Dense(1, activation='sigmoid')
 )
-
+```
 3. **Performance Characteristics**:
 - Typical accuracy: 92-95% on betting spam detection
 - Lower effectiveness on non-gambling related spam
