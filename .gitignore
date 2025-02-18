@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Data Files
+data/
+
+# Model files
+spam_detector_model/
+tokenizer.pickle
+params.pickle
+
+# OS files
+.DS_Store
