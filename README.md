@@ -13,7 +13,6 @@ Aegis is a specialized spam detection system designed to combat betting promoter
   - Normalizes common evasion tactics (e.g., "p!cks" → "picks")
   - Handles number substitutions (1 → i, 3 → e, 0 → o)
   - Processes symbol replacements (@ → a, $ → s)
-  - Removes censoring characters (* and #)
 - **Optimization**:
   - Skips processing for short words (≤ 2 characters)
   - Only processes words containing special characters
@@ -117,13 +116,14 @@ python spam_detector.py
    - Balanced sampling of existing data
 
 ## Future Improvements
-- Deployment as a Discord bot is pending.
-- Generalization to non-gambling related spam is pending.
-- Additional model architecture tuning is pending.
+- Deployment as a Discord bot
+- Generalization to non-gambling related spam
+- False positive handling
+- Additional model architecture tuning
 
 ## Generalization Potential
 
-### 1. Expanding Beyond Betting Spam
+### Expanding Beyond Betting Spam
 The current model architecture can be adapted for different spam categories by:
 - Retraining on new domain-specific datasets
 - Adjusting the vocabulary size and embedding dimensions
@@ -144,75 +144,3 @@ The current model architecture can be adapted for different spam categories by:
    - Unauthorized server advertisements
    - Drop shipping promotions
    - Account selling/trading
-
-### 2. Architecture Adaptations
-The model can be enhanced for broader spam detection through:
-
-1. **Multi-Label Classification**
-   - Categorize different types of spam
-   - Provide specific threat levels
-   - Enable targeted response actions
-
-2. **Language-Specific Models**
-   - Train separate models for different languages
-   - Implement language detection preprocessing
-   - Handle multilingual servers effectively
-
-3. **Pattern Recognition Improvements**
-   - Expand character substitution patterns
-   - Add regex-based feature extraction
-   - Implement URL and domain analysis
-
-### 3. Scalability Features
-
-1. **Cross-Server Learning**
-   - Share spam patterns across servers
-   - Maintain server-specific whitelists
-   - Implement privacy-preserving pattern sharing
-
-2. **Adaptive Thresholds**
-   - Dynamic confidence thresholds
-   - Server-specific customization
-   - Activity-based adjustment
-
-3. **Resource Optimization**
-   - Batch processing for efficiency
-   - Caching frequent patterns
-   - Distributed model deployment
-
-### 4. Integration Capabilities
-
-1. **API Extensions**
-   - REST API for external services
-   - Webhook support for notifications
-   - Integration with moderation bots
-
-2. **Reporting System**
-   - Detailed spam analytics
-   - Pattern emergence detection
-   - Effectiveness metrics
-
-3. **Community Features**
-   - Collaborative pattern reporting
-   - Trusted moderator network
-   - Shared blocklist management
-
-### 5. Privacy and Security
-
-1. **Data Protection**
-   - Message anonymization
-   - Sensitive data filtering
-   - GDPR compliance features
-
-2. **Attack Prevention**
-   - Anti-poisoning measures
-   - Rate limiting
-   - Abuse prevention
-
-The model's LSTM architecture and character substitution handling provide a strong foundation for these expansions, requiring primarily:
-1. Additional training data for new domains
-2. Architecture adjustments for specific use cases
-3. Implementation of supporting features for scalability
-4. Development of integration interfaces
-
-This generalization would transform the current betting-focused system into a comprehensive spam detection platform suitable for diverse Discord communities.
